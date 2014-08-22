@@ -1,0 +1,37 @@
+{
+  "name": "header-command",
+  "version": "0.0.0",
+  "description": "Command implementation for header tags (\"h1\", \"h2\", \"h3\", etc.)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/webmodules/header-command.git"
+  },
+  "keywords": [
+    "browser",
+    "command",
+    "interface",
+    "header",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6"
+  ],
+  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webmodules/header-command/issues"
+  },
+  "homepage": "https://github.com/webmodules/header-command",
+  "dependencies": {
+    "component-closest": "~0.1.4",
+    "current-range": "~1.0.1",
+    "debug": "~1.0.4",
+    "native-command": "~0.1.1"
+  }
+}
