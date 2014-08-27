@@ -63,19 +63,3 @@ class HeaderCommand extends NativeCommand {
 }
 
 export = HeaderCommand;
-
-  /**
-   * All: Executing a heading command inside a list element corrupts the markup.
-   * Disabling for now.
-   */
-  /*
-  headingCommand.queryEnabled = function () {
-    var selection = new scribe.api.Selection();
-    var listNode = selection.getContaining(function (node) {
-      return node.nodeName === 'OL' || node.nodeName === 'UL';
-    });
-
-    return scribe.api.Command.prototype.queryEnabled.apply(this, arguments)
-      && scribe.allowsBlockElements() && ! listNode;
-  };
-  */
