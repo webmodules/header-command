@@ -36,10 +36,10 @@ class HeaderCommand extends NativeCommand {
 
   constructor(level: number, doc?: Document) {
     super('formatBlock', doc);
-    this.level = level;
-    this.tag = '<h' + level + '>';
-    this.nodeName = 'H' + level;
-    debug('created HeaderCommand: level %o, document %o', level, this.document);
+    this.level = parseInt(String(level).replace(/^h/i, ''), 10);
+    this.tag = '<h' + this.level + '>';
+    this.nodeName = 'H' + this.level;
+    debug('created HeaderCommand: level %o, document %o', this.level, this.document);
   }
 
   execute(range?: Range, value?: any): void {
