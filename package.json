@@ -4,6 +4,7 @@
   "description": "Command implementation for header tags (\"h1\", \"h2\", \"h3\", etc.)",
   "main": "index.js",
   "scripts": {
+    "prepublish": "tsc --module commonjs --declaration index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
