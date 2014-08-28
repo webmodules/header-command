@@ -56,10 +56,6 @@ class HeaderCommand extends NativeCommand {
     var node = closest(range.commonAncestorContainer, this.nodeName, true);
     return !! node;
   }
-
-  queryEnabled(range?: Range): boolean {
-    return super.queryEnabled(range);
-  }
 }
 
 export = HeaderCommand;
