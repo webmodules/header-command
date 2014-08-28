@@ -12,6 +12,7 @@ import NativeCommand = require('native-command');
 
 var closest = require('component-closest');
 var currentRange = require('current-range');
+var unwrap = require('unwrap-node');
 var debug = require('debug')('header-command');
 
 /**
@@ -43,10 +44,29 @@ class HeaderCommand extends NativeCommand {
   }
 
   execute(range?: Range, value?: any): void {
-    if (this.queryState(range)) {
-      super.execute(range, '<p>');
+    var r = range || currentRange(this.document);
+    var li = closest(r.commonAncestorContainer, 'li', true);
+
+    if (li) {
+      // we're inside a LI element
+      var h = li.querySelector(this.nodeName);
+      if (h) {
+        // unwrap the H node
+        unwrap(h);
+      } else {
+        // create an H node, wrap the LI contents with it
+        h = this.document.createElement(this.nodeName);
+        while (li.firstChild) {
+          h.appendChild(li.firstChild);
+        }
+        li.appendChild(h);
+      }
     } else {
-      super.execute(range, this.tag);
+      if (this.queryState(r)) {
+        super.execute(range, '<p>');
+      } else {
+        super.execute(range, this.tag);
+      }
     }
   }
 
