@@ -1,6 +1,6 @@
 {
   "name": "header-command",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Command implementation for header tags (\"h1\", \"h2\", \"h3\", etc.)",
   "main": "index.js",
   "scripts": {
