@@ -30,10 +30,10 @@
   },
   "homepage": "https://github.com/webmodules/header-command",
   "dependencies": {
-    "component-closest": "~0.1.4",
+    "component-closest": "0.1.4",
     "current-range": "~1.1.0",
-    "debug": "~2.0.0",
-    "native-command": "~0.2.0",
+    "debug": "2",
+    "native-command": "~0.2.1",
     "unwrap-node": "0.0.1"
   },
   "devDependencies": {
