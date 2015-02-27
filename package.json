@@ -37,7 +37,7 @@
     "unwrap-node": "0.0.1"
   },
   "devDependencies": {
-    "typescript": "~1.0.1",
+    "typescript": "~1.4.1",
     "zuul": "~1.10.2"
   }
 }
