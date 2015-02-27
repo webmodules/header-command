@@ -34,7 +34,7 @@
     "current-range": "~1.1.1",
     "debug": "2",
     "native-command": "~0.2.1",
-    "unwrap-node": "0.0.1"
+    "unwrap-node": "~1.0.0"
   },
   "devDependencies": {
     "typescript": "~1.4.1",
